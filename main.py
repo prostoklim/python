@@ -40,3 +40,26 @@
 # x = "Что то"
 # x = 'Что то'
 # print("И он сказал: точка-точка-точка")
+print("Привет")
+alphabet="ФЬВГДЕЖЗ"
+
+print(alphabet[:])
+# phrase="ктотто"
+# print(phrase.upper())
+#
+# phrase1="Яфраза, Яфраза, Яфраза"
+# print(phrase1.capitalize())
+fam = input("фам")
+name = input("имя")
+oth = input("отч")
+print(fam, name[0] +".", oth[0] + ".")
+# x = print()
+# print (x.count("a"))
+#
+# print (x.count("a"))
+email = ("Введи почту либо 1000-7")
+print(email.split("@"))
+login = email.split("@")[0]
+domain = email.split("@")[-1]
+print("Логин", login)
+print("Домэн", login)
