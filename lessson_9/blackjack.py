@@ -24,33 +24,33 @@ while is_game == "y":
         else:
             get_card = input("y - взять карту, n - остановиться: ")
 
-        while sum(computer) < 17:  # пока у компьютера < 17
-            computer.append(random.choice(cards))
+    while sum(computer) < 17:  # пока у компьютера < 17
+        computer.append(random.choice(cards))
 
-        if sum(computer) > 21 and 11 in computer:
-            """если туз в руке и сумма > 21"""
-            for i in range(0, len(computer)):  # пробегаемся по списку по индексам
-                if computer[i] == 11:
-                    computer[i] = 1
-                    break
-        score_computer = sum(computer)
-        print("=" * 10)
-        print(f"Твоя итоговая рука: {player}. Очков: {score}")
-        print(f"Итоговая рука компьютера: {computer}. Очков: {score_computer}")
+    if sum(computer) > 21 and 11 in computer:
+        """если туз в руке и сумма > 21"""
+        for i in range(0, len(computer)):  # пробегаемся по списку по индексам
+            if computer[i] == 11:
+                computer[i] = 1
+                break
+    score_computer = sum(computer)
+    print("=" * 10)
+    print(f"Твоя итоговая рука: {player}. Очков: {score}")
+    print(f"Итоговая рука компьютера: {computer}. Очков: {score_computer}")
 
 
-        # кто победил
-        if score > 21 and score_computer > 21:
-            print("Перелёт у обоих. Ничья.")
-        elif score > 21:
-            print("Твой перелёт. Ты проиграл.")
-        elif score_computer > 21:
-            print("Перелёт компьютера. Ты победил.")
-        elif score == score_computer:
-            print("Ничья")
-        elif score > score_computer:
-            print("Победа.")
-        else:
-            print("Проиграл")
+    # кто победил
+    if score > 21 and score_computer > 21:
+        print("Перелёт у обоих. Ничья.")
+    elif score > 21:
+        print("Твой перелёт. Ты проиграл.")
+    elif score_computer > 21:
+        print("Перелёт компьютера. Ты победил.")
+    elif score == score_computer:
+        print("Ничья")
+    elif score > score_computer:
+        print("Победа.")
+    else:
+        print("Проиграл")
 
-        is_game = input("Играем дальше? y - да, n - нет")
+    is_game = input("Играем дальше? y - да, n - нет")
